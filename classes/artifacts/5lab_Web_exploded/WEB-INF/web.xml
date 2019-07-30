@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" 
+xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+id="WebApp_ID" version="2.4">
+
+	<display-name>Lab5</display-name>
+
+	<filter>
+		<description>
+		</description>
+		<display-name>IndexPageFilter</display-name>
+		<filter-name>IndexPageFilter</filter-name>
+		<filter-class>by.gsu.lab.controllers.IndexPageFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>IndexPageFilter</filter-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<description>
+		</description>
+		<display-name>Task1Filter</display-name>
+		<filter-name>Task1Filter</filter-name>
+		<filter-class>by.gsu.lab.controllers.Task1Filter</filter-class>
+	</filter>
+	<filter-mapping> 
+		<filter-name>Task1Filter</filter-name>
+		<url-pattern>/task1-preview.jsp</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>AbstractBaseController</display-name>
+		<servlet-name>AbstractBaseController</servlet-name>
+		<servlet-class>by.gsu.lab.controllers.AbstractBaseController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AbstractBaseController</servlet-name>
+		<url-pattern>/AbstractBaseController</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+		<description>
+		</description>
+		<display-name>insert-galaxy</display-name>
+		<servlet-name>InsertDotsCoordinates</servlet-name>
+		<servlet-class>by.gsu.lab.controllers.InsertDotsCoordinates</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InsertDotsCoordinates</servlet-name>
+		<url-pattern>/InsertDotsCoordinates</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>view-data</display-name>
+		<servlet-name>ViewDataController</servlet-name>
+		<servlet-class>by.gsu.lab.controllers.ViewDataController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ViewDataController</servlet-name>
+		<url-pattern>/ViewDataController</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>task3</display-name>
+		<servlet-name>Task3Controller</servlet-name>
+		<servlet-class>by.gsu.lab.controllers.Task3Controller</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Task3Controller</servlet-name>
+		<url-pattern>/Task3Controller</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>task4</display-name>
+		<servlet-name>Task4Controller</servlet-name>
+		<servlet-class>by.gsu.lab.controllers.Task4Controller</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Task4Controller</servlet-name>
+		<url-pattern>/Task4Controller</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>task1</display-name>
+		<servlet-name>Task1Controller</servlet-name>
+		<servlet-class>by.gsu.lab.controllers.Task1Controller</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Task1Controller</servlet-name>
+		<url-pattern>/Task1Controller</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/jstl/core</taglib-uri>
+			<taglib-location>/WEB-INF/c.tld</taglib-location>
+		</taglib>
+		<jsp-property-group>
+        	<url-pattern>*.jsp</url-pattern>
+        	<page-encoding>UTF-8</page-encoding>
+    	</jsp-property-group>
+	</jsp-config>
+	
+</web-app>
